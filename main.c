@@ -1,4 +1,4 @@
-#include "ballAlg.h"
+#include "main.h"
 
 int main()
 {
