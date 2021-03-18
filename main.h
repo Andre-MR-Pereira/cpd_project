@@ -3,5 +3,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "lib/heap_modules/Heap.h"
 
 #endif

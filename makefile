@@ -17,13 +17,16 @@ CC_FLAGS=-c			\
 
 all: $(PROJ_NAME)
  
-$(PROJ_NAME): $(OBJ)
+$(PROJ_NAME): main.o heap.o
 	$(CC) -o $@ $^
 
 %.o: %.c %.h
 	$(CC) -o $@ $< $(CC_FLAGS)
 	
 main.o: main.c $(H_SOURCE)
+	$(CC) -o $@ $< $(CC_FLAGS)
+
+heap.o: ./lib/heap_modules/Heap.c ./lib/heap_modules/Heap.h
 	$(CC) -o $@ $< $(CC_FLAGS)
 
 clean:
